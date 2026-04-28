@@ -40,15 +40,21 @@
       border-radius: 5px;
       font-size: 12px;
     }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 15px;
+    }
     .screenshot {
       width: 100%;
-      border-radius: 8px;
-      margin-top: 15px;
+      border-radius: 10px;
     }
     .caption {
       font-size: 13px;
       color: #666;
-      margin-bottom: 10px;
+      margin-top: 5px;
+      text-align: center;
     }
   </style>
 </head>
@@ -79,6 +85,7 @@
 
 <h2>Projects</h2>
 
+<!-- MULA -->
 <div class="card">
   <h3>Mula – Fintech Wallet</h3>
   <p>
@@ -90,42 +97,57 @@
     <a href="https://play.google.com/store/apps/details?id=com.mulax.android">Android</a>
   </div>
 
-  <img class="screenshot" src="mula3.jpg">
-  <p class="caption">Transaction flow and payment interface</p>
-
-  <img class="screenshot" src="mula5.jpg">
-  <p class="caption">Wallet features including transfers and financial actions</p>
-
-  <img class="screenshot" src="mula6.jpg">
-  <p class="caption">Additional feature interface showing real-world usage scenarios</p>
-
+  <div class="grid">
+    <div>
+      <img class="screenshot" src="mula3.jpg">
+      <div class="caption">Transaction flow</div>
+    </div>
+    <div>
+      <img class="screenshot" src="mula5.jpg">
+      <div class="caption">Wallet features</div>
+    </div>
+    <div>
+      <img class="screenshot" src="mula6.jpg">
+      <div class="caption">Feature interface</div>
+    </div>
+  </div>
 </div>
 
+<!-- SUAVE -->
 <div class="card">
-  <h3>Suave – BNPL App</h3>
+  <h3>Suave – Buy Now Pay Later (BNPL)</h3>
   <p>
   Developed production BNPL application with strong ratings (4.6⭐ iOS). Implemented financial flows and account features.
   </p>
+
   <div class="links">
     <a href="https://apps.apple.com/us/app/suave-buy-now-pay-later/id1605798113">iOS</a>
     <a href="https://play.google.com/store/apps/details?id=co.inc.suave">Android</a>
   </div>
 
-  <img class="screenshot" src="suave1.jpg">
-  <p class="caption">Dashboard showing available spending and shopping access</p>
-  
-  <img class="screenshot" src="suave3.jpg">
-  <p class="caption">BNPL payment flow with installment options</p>
-  
-  <img class="screenshot" src="suave5.jpg">
-  <p class="caption">Account and payment tracking interface</p>
+  <div class="grid">
+    <div>
+      <img class="screenshot" src="suave1.jpg">
+      <div class="caption">Dashboard & spending overview</div>
+    </div>
+    <div>
+      <img class="screenshot" src="suave3.jpg">
+      <div class="caption">Installment payment flow</div>
+    </div>
+    <div>
+      <img class="screenshot" src="suave5.jpg">
+      <div class="caption">Account & repayment tracking</div>
+    </div>
+  </div>
 </div>
 
+<!-- BIZNESSAPPS -->
 <div class="card">
   <h3>BiznessApps – No-Code Platform</h3>
   <p>
   Built system to dynamically generate mobile apps from configuration and automate build & app store submission.
   </p>
+
   <div class="links">
     <a href="https://www.biznessapps.com/sf_campaign_id-7015000000169eE/">Website</a>
   </div>
