@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Xihong Wang - Senior Mobile Engineer</title>
+
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, Arial;
@@ -11,27 +12,43 @@
       padding: 30px;
       background: #f9f9f9;
       color: #333;
+      transition: background 0.3s, color 0.3s;
     }
+
+    .dark {
+      background: #121212;
+      color: #eee;
+    }
+
     h1 {
       margin-bottom: 5px;
     }
+
     h2 {
       margin-top: 40px;
       border-bottom: 2px solid #eee;
       padding-bottom: 5px;
     }
+
     .card {
       background: white;
       padding: 20px;
       border-radius: 10px;
       margin-top: 20px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      animation: fadeIn 0.6s ease;
     }
+
+    .dark .card {
+      background: #1e1e1e;
+    }
+
     .links a {
       margin-right: 10px;
       color: #007acc;
       text-decoration: none;
     }
+
     .tag {
       display: inline-block;
       background: #eee;
@@ -40,21 +57,63 @@
       border-radius: 5px;
       font-size: 12px;
     }
+
+    .dark .tag {
+      background: #333;
+    }
+
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 15px;
       margin-top: 15px;
     }
+
     .screenshot {
       width: 100%;
       border-radius: 10px;
+      transition: transform 0.3s;
     }
+
+    .screenshot:hover {
+      transform: scale(1.03);
+    }
+
     .caption {
       font-size: 13px;
-      color: #666;
+      color: #888;
       margin-top: 5px;
       text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 15px;
+      margin-right: 10px;
+      border-radius: 6px;
+      background: #007acc;
+      color: white;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    .button:hover {
+      opacity: 0.8;
+    }
+
+    .top-buttons {
+      margin-top: 10px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -65,33 +124,22 @@
 <p><strong>Senior Mobile Engineer (iOS & Android)</strong></p>
 <p>Email: xihongwang9@gmail.com</p>
 
+<div class="top-buttons">
+  <a class="button" href="resume.pdf" target="_blank">Download Resume</a>
+  <button class="button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+</div>
+
 <h2>Summary</h2>
 <div class="card">
 <p>
-15+ years of experience building production mobile applications, including fintech wallet systems, BNPL platforms, and no-code mobile solutions. Strong in architecture design, scalable systems, and delivering high-quality apps used by real customers.
+15+ years of experience building production mobile applications, including fintech wallet systems, BNPL platforms, and no-code mobile solutions.
 </p>
-</div>
-
-<h2>Skills</h2>
-<div class="card">
-<span class="tag">Swift</span>
-<span class="tag">Kotlin</span>
-<span class="tag">SwiftUI</span>
-<span class="tag">Jetpack</span>
-<span class="tag">MVVM</span>
-<span class="tag">Fintech</span>
-<span class="tag">API Integration</span>
 </div>
 
 <h2>Projects</h2>
 
-<!-- MULA -->
 <div class="card">
   <h3>Mula – Fintech Wallet</h3>
-  <p>
-  Built full iOS and Android apps including e-KYC, wallet transfers, PromptPay, bill payment, and transaction history.
-  </p>
-
   <div class="links">
     <a href="https://apps.apple.com/us/app/mula/id1618875274">iOS</a>
     <a href="https://play.google.com/store/apps/details?id=com.mulax.android">Android</a>
@@ -113,13 +161,8 @@
   </div>
 </div>
 
-<!-- SUAVE -->
 <div class="card">
-  <h3>Suave – Buy Now Pay Later (BNPL)</h3>
-  <p>
-  Developed production BNPL application with strong ratings (4.6⭐ iOS). Implemented financial flows and account features.
-  </p>
-
+  <h3>Suave – BNPL</h3>
   <div class="links">
     <a href="https://apps.apple.com/us/app/suave-buy-now-pay-later/id1605798113">iOS</a>
     <a href="https://play.google.com/store/apps/details?id=co.inc.suave">Android</a>
@@ -128,30 +171,24 @@
   <div class="grid">
     <div>
       <img class="screenshot" src="suave1.jpg">
-      <div class="caption">Dashboard & spending overview</div>
+      <div class="caption">Dashboard</div>
     </div>
     <div>
       <img class="screenshot" src="suave3.jpg">
-      <div class="caption">Installment payment flow</div>
+      <div class="caption">Payment flow</div>
     </div>
     <div>
       <img class="screenshot" src="suave5.jpg">
-      <div class="caption">Account & repayment tracking</div>
+      <div class="caption">Account tracking</div>
     </div>
   </div>
 </div>
 
-<!-- BIZNESSAPPS -->
-<div class="card">
-  <h3>BiznessApps – No-Code Platform</h3>
-  <p>
-  Built system to dynamically generate mobile apps from configuration and automate build & app store submission.
-  </p>
-
-  <div class="links">
-    <a href="https://www.biznessapps.com/sf_campaign_id-7015000000169eE/">Website</a>
-  </div>
-</div>
+<script>
+function toggleDarkMode() {
+  document.body.classList.toggle("dark");
+}
+</script>
 
 </body>
 </html>
